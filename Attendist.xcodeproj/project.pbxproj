@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -158,7 +158,6 @@
 				46B1F4A2D5825DF501AD6D19 /* Pods-AttendistTests.debug.xcconfig */,
 				FF29E0E98BE01B622500F7C8 /* Pods-AttendistTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -184,6 +183,7 @@
 				442659B323A2ABB100942C5D /* Frameworks */,
 				442659B423A2ABB100942C5D /* Resources */,
 				E564423B92B732407923743E /* [CP] Embed Pods Frameworks */,
+				60433C516F3368B1D28056C3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -222,6 +222,7 @@
 				442659D423A2ABB200942C5D /* Frameworks */,
 				442659D523A2ABB200942C5D /* Resources */,
 				BA4A3EB7583D603D66401C88 /* [CP] Embed Pods Frameworks */,
+				32B1BD6B823DC2F3D71E20F2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -347,6 +348,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32B1BD6B823DC2F3D71E20F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Attendist-AttendistUITests/Pods-Attendist-AttendistUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Attendist-AttendistUITests/Pods-Attendist-AttendistUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Attendist-AttendistUITests/Pods-Attendist-AttendistUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60433C516F3368B1D28056C3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Attendist/Pods-Attendist-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Attendist/Pods-Attendist-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Attendist/Pods-Attendist-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		999B454380EB3554C55D0AB3 /* [CP] Check Pods Manifest.lock */ = {
@@ -596,7 +631,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rpinc.Attendist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rpinc.Attendist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -616,7 +651,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = rpinc.Attendist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rpinc.Attendist;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

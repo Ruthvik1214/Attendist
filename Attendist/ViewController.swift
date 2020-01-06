@@ -8,13 +8,16 @@
 
 import UIKit
 import Firebase
-
+import GoogleSignIn
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var Exit: UIButton!
     override func viewDidLoad() {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        GIDSignIn.sharedInstance().signIn()
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
+    
 }
 

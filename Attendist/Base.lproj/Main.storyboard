@@ -75,10 +75,10 @@
             </objects>
             <point key="canvasLocation" x="-1006.6666666666666" y="107.77777777777777"/>
         </scene>
-        <!--View Controller-->
+        <!--Code Attendance-->
         <scene sceneID="mxD-Te-6fc">
             <objects>
-                <viewController id="SLE-f9-Ozn" sceneMemberID="viewController">
+                <viewController id="SLE-f9-Ozn" customClass="QRCodeAttendance" customModule="Attendist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3e8-qg-aec">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -411,8 +411,8 @@
     <inferredMetricsTieBreakers>
         <segue reference="tJb-zJ-ZmU"/>
         <segue reference="8dF-dS-oGK"/>
-        <segue reference="DKC-I7-P8j"/>
-        <segue reference="jDk-25-gDg"/>
+        <segue reference="TxM-pU-vBW"/>
+        <segue reference="cqy-Uq-JAr"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>

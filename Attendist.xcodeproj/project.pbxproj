@@ -15,6 +15,10 @@
 		442659C623A2ABB200942C5D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 442659C423A2ABB200942C5D /* LaunchScreen.storyboard */; };
 		442659D123A2ABB200942C5D /* AttendistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442659D023A2ABB200942C5D /* AttendistTests.swift */; };
 		442659DC23A2ABB200942C5D /* AttendistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442659DB23A2ABB200942C5D /* AttendistUITests.swift */; };
+		442DA80123C31A9E0034EAD6 /* QRCodeAttendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442DA80023C31A9E0034EAD6 /* QRCodeAttendance.swift */; };
+		442DA80323C31BBD0034EAD6 /* AttendanceRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442DA80223C31BBD0034EAD6 /* AttendanceRecords.swift */; };
+		442DA80523C31D3B0034EAD6 /* ManualAttendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442DA80423C31D3B0034EAD6 /* ManualAttendance.swift */; };
+		442DA80723C31E2C0034EAD6 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442DA80623C31E2C0034EAD6 /* SampleData.swift */; };
 		4435C6F223BE9C5600E7B9AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4435C6F123BE9C5600E7B9AC /* GoogleService-Info.plist */; };
 		524F315A3266BC1EB2CB243A /* Pods_Attendist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCF80256F87D2785E1E9340 /* Pods_Attendist.framework */; };
 		68E8FB6F6099E5D60B0516EF /* Pods_AttendistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32230C32FFF68ACBC798903 /* Pods_AttendistTests.framework */; };
@@ -55,6 +59,10 @@
 		442659D723A2ABB200942C5D /* AttendistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AttendistUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		442659DB23A2ABB200942C5D /* AttendistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendistUITests.swift; sourceTree = "<group>"; };
 		442659DD23A2ABB200942C5D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		442DA80023C31A9E0034EAD6 /* QRCodeAttendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeAttendance.swift; sourceTree = "<group>"; };
+		442DA80223C31BBD0034EAD6 /* AttendanceRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttendanceRecords.swift; sourceTree = "<group>"; };
+		442DA80423C31D3B0034EAD6 /* ManualAttendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAttendance.swift; sourceTree = "<group>"; };
+		442DA80623C31E2C0034EAD6 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		4435C6F123BE9C5600E7B9AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		46B1F4A2D5825DF501AD6D19 /* Pods-AttendistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendistTests.debug.xcconfig"; path = "Target Support Files/Pods-AttendistTests/Pods-AttendistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A44C9A19BA877EA1A7D9230 /* Pods-Attendist-AttendistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attendist-AttendistUITests.debug.xcconfig"; path = "Target Support Files/Pods-Attendist-AttendistUITests/Pods-Attendist-AttendistUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -119,9 +127,13 @@
 			isa = PBXGroup;
 			children = (
 				442659B923A2ABB100942C5D /* AppDelegate.swift */,
+				442DA80223C31BBD0034EAD6 /* AttendanceRecords.swift */,
+				442DA80623C31E2C0034EAD6 /* SampleData.swift */,
 				442659BB23A2ABB100942C5D /* SceneDelegate.swift */,
 				442659BD23A2ABB100942C5D /* ViewController.swift */,
 				442659BF23A2ABB200942C5D /* Main.storyboard */,
+				442DA80423C31D3B0034EAD6 /* ManualAttendance.swift */,
+				442DA80023C31A9E0034EAD6 /* QRCodeAttendance.swift */,
 				442659C223A2ABB200942C5D /* Assets.xcassets */,
 				442659C423A2ABB200942C5D /* LaunchScreen.storyboard */,
 				442659C723A2ABB200942C5D /* Info.plist */,
@@ -448,7 +460,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				442659BE23A2ABB200942C5D /* ViewController.swift in Sources */,
+				442DA80723C31E2C0034EAD6 /* SampleData.swift in Sources */,
+				442DA80323C31BBD0034EAD6 /* AttendanceRecords.swift in Sources */,
+				442DA80523C31D3B0034EAD6 /* ManualAttendance.swift in Sources */,
 				442659BA23A2ABB100942C5D /* AppDelegate.swift in Sources */,
+				442DA80123C31A9E0034EAD6 /* QRCodeAttendance.swift in Sources */,
 				442659BC23A2ABB100942C5D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

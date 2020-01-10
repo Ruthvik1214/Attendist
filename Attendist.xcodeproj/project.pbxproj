@@ -20,6 +20,7 @@
 		442DA80523C31D3B0034EAD6 /* ManualAttendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442DA80423C31D3B0034EAD6 /* ManualAttendance.swift */; };
 		442DA80723C31E2C0034EAD6 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 442DA80623C31E2C0034EAD6 /* SampleData.swift */; };
 		4435C6F223BE9C5600E7B9AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4435C6F123BE9C5600E7B9AC /* GoogleService-Info.plist */; };
+		44A860C923C82AC300AA36A7 /* AddClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A860C823C82AC300AA36A7 /* AddClasses.swift */; };
 		524F315A3266BC1EB2CB243A /* Pods_Attendist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCF80256F87D2785E1E9340 /* Pods_Attendist.framework */; };
 		68E8FB6F6099E5D60B0516EF /* Pods_AttendistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32230C32FFF68ACBC798903 /* Pods_AttendistTests.framework */; };
 		C33BA9BA0DDF5F80A3714D07 /* Pods_Attendist_AttendistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF161577224A14C7A64DB40 /* Pods_Attendist_AttendistUITests.framework */; };
@@ -64,6 +65,7 @@
 		442DA80423C31D3B0034EAD6 /* ManualAttendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualAttendance.swift; sourceTree = "<group>"; };
 		442DA80623C31E2C0034EAD6 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		4435C6F123BE9C5600E7B9AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		44A860C823C82AC300AA36A7 /* AddClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClasses.swift; sourceTree = "<group>"; };
 		46B1F4A2D5825DF501AD6D19 /* Pods-AttendistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendistTests.debug.xcconfig"; path = "Target Support Files/Pods-AttendistTests/Pods-AttendistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A44C9A19BA877EA1A7D9230 /* Pods-Attendist-AttendistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attendist-AttendistUITests.debug.xcconfig"; path = "Target Support Files/Pods-Attendist-AttendistUITests/Pods-Attendist-AttendistUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBCF80256F87D2785E1E9340 /* Pods_Attendist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Attendist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,12 +128,13 @@
 		442659B823A2ABB100942C5D /* Attendist */ = {
 			isa = PBXGroup;
 			children = (
+				442DA80623C31E2C0034EAD6 /* SampleData.swift */,
 				442659B923A2ABB100942C5D /* AppDelegate.swift */,
 				442DA80223C31BBD0034EAD6 /* AttendanceRecords.swift */,
-				442DA80623C31E2C0034EAD6 /* SampleData.swift */,
 				442659BB23A2ABB100942C5D /* SceneDelegate.swift */,
 				442659BD23A2ABB100942C5D /* ViewController.swift */,
 				442659BF23A2ABB200942C5D /* Main.storyboard */,
+				44A860C823C82AC300AA36A7 /* AddClasses.swift */,
 				442DA80423C31D3B0034EAD6 /* ManualAttendance.swift */,
 				442DA80023C31A9E0034EAD6 /* QRCodeAttendance.swift */,
 				442659C223A2ABB200942C5D /* Assets.xcassets */,
@@ -461,6 +464,7 @@
 			files = (
 				442659BE23A2ABB200942C5D /* ViewController.swift in Sources */,
 				442DA80723C31E2C0034EAD6 /* SampleData.swift in Sources */,
+				44A860C923C82AC300AA36A7 /* AddClasses.swift in Sources */,
 				442DA80323C31BBD0034EAD6 /* AttendanceRecords.swift in Sources */,
 				442DA80523C31D3B0034EAD6 /* ManualAttendance.swift in Sources */,
 				442659BA23A2ABB100942C5D /* AppDelegate.swift in Sources */,
@@ -639,8 +643,9 @@
 			baseConfigurationReference = 3055910BCAD01224866BF5E4 /* Pods-Attendist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Attendist/Attendist.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = F97Q7L32F7;
 				INFOPLIST_FILE = Attendist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -659,8 +664,9 @@
 			baseConfigurationReference = E5CB427A2CF5194CB7E14E3E /* Pods-Attendist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Attendist/Attendist.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 4;
 				DEVELOPMENT_TEAM = F97Q7L32F7;
 				INFOPLIST_FILE = Attendist/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

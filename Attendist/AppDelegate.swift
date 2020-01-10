@@ -12,8 +12,10 @@ import FirebaseDatabase
 import GoogleSignIn
 import FirebaseAuth
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
+    static var userID = ""
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
       // ...
       if let error = error {
@@ -29,11 +31,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
           // ...
           return
         }
-        // User is signed in
-        // ...
-      }
+        AppDelegate.userID = user.userID
+        
+        }
+
     }
 
+    
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
         // Perform any operations when the user disconnects from app here.
         // ...
@@ -48,7 +52,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
         return true
     }

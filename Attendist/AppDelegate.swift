@@ -15,7 +15,7 @@ import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
-    static var userID = ""
+//    static var userID = ""
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
       // ...
       if let error = error {
@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
           // ...
           return
         }
-        AppDelegate.userID = user.userID
+//        AppDelegate.userID = user.userID
         
         }
 

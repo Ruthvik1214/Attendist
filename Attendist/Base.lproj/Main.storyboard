@@ -113,8 +113,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EC6-8M-VVi">
+                                <rect key="frame" x="102" y="205" width="509" height="584"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNP-8B-qyf">
-                                <rect key="frame" x="135" y="844.5" width="397" height="66"/>
+                                <rect key="frame" x="158" y="852" width="397" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="Back to Homescreen"/>
@@ -199,18 +204,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manual Attendance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4H-7d-GMa">
-                                <rect key="frame" x="170" y="143" width="372" height="54"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Manual Attendance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4H-7d-GMa">
+                                <rect key="frame" x="47" y="55" width="611" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lrx-ux-jT9">
-                                <rect key="frame" x="245" y="708" width="355" height="66"/>
+                                <rect key="frame" x="47" y="708" width="611" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="Check Attendance"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Check Attendance">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="7Ge-ZJ-p8V" kind="show" id="cqy-Uq-JAr"/>
                                 </connections>
@@ -252,7 +260,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmB-h1-sOK">
-                                <rect key="frame" x="52" y="194" width="611" height="57"/>
+                                <rect key="frame" x="47" y="194" width="611" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
@@ -264,7 +272,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOg-gb-2JN">
-                                <rect key="frame" x="52" y="627" width="611" height="57"/>
+                                <rect key="frame" x="47" y="627" width="611" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
@@ -293,33 +301,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sql-Vc-Nor">
-                                <rect key="frame" x="47" y="534" width="611" height="57"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
-                                <state key="normal" title="Take Attendance">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="0LL-gJ-thd" kind="show" id="DKC-I7-P8j"/>
-                                </connections>
-                            </button>
-                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ore-H2-lcW">
+                            <segmentedControl opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Ore-H2-lcW">
                                 <rect key="frame" x="47" y="849" width="611" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.070588235294117646" green="0.74827438592910767" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <segments>
                                     <segment title="First"/>
                                     <segment title="Second"/>
                                 </segments>
                             </segmentedControl>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Current Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOA-Tw-njc">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Class" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOA-Tw-njc">
                                 <rect key="frame" x="147" y="702" width="425" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lt-qy-7jB">
-                                <rect key="frame" x="47" y="233" width="611" height="57"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nHA-A5-r0u" customClass="GIDSignInButton">
+                                <rect key="frame" x="251" y="58" width="217" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lt-qy-7jB">
+                                <rect key="frame" x="47" y="236" width="611" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Classes">
@@ -329,8 +334,9 @@
                                     <segue destination="eTs-wQ-zOH" kind="show" id="tJb-zJ-ZmU"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wf-3z-1zi">
-                                <rect key="frame" x="47" y="382" width="611" height="57"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Wf-3z-1zi">
+                                <rect key="frame" x="47" y="408" width="611" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <state key="normal" title="Current Attendance">
@@ -340,35 +346,20 @@
                                     <segue destination="7Ge-ZJ-p8V" kind="show" id="jDk-25-gDg"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nHA-A5-r0u" customClass="GIDSignInButton">
-                                <rect key="frame" x="251" y="58" width="217" height="128"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sql-Vc-Nor">
+                                <rect key="frame" x="47" y="580" width="611" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Take Attendance">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0LL-gJ-thd" kind="show" id="DKC-I7-P8j"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="Sql-Vc-Nor" firstAttribute="top" secondItem="1lt-qy-7jB" secondAttribute="top" constant="150" id="3B7-o3-36t"/>
-                            <constraint firstItem="Sql-Vc-Nor" firstAttribute="trailing" secondItem="1lt-qy-7jB" secondAttribute="trailing" constant="150" id="4KZ-QF-sY5"/>
-                            <constraint firstItem="8Wf-3z-1zi" firstAttribute="leading" secondItem="1lt-qy-7jB" secondAttribute="leading" constant="150" id="6mK-NJ-564"/>
-                            <constraint firstItem="Sql-Vc-Nor" firstAttribute="leading" secondItem="1lt-qy-7jB" secondAttribute="leading" constant="150" id="6pZ-e4-uqv"/>
-                            <constraint firstItem="JOA-Tw-njc" firstAttribute="leading" secondItem="1lt-qy-7jB" secondAttribute="leading" constant="150" id="IcH-Co-4kM"/>
-                            <constraint firstItem="Ore-H2-lcW" firstAttribute="top" secondItem="1lt-qy-7jB" secondAttribute="top" constant="150" id="S9Z-ee-67s"/>
-                            <constraint firstItem="Ore-H2-lcW" firstAttribute="leading" secondItem="1lt-qy-7jB" secondAttribute="leading" constant="150" id="STT-s9-CT1"/>
-                            <constraint firstItem="JOA-Tw-njc" firstAttribute="leading" secondItem="1lt-qy-7jB" secondAttribute="leading" constant="150" id="Zup-EE-7xb"/>
-                            <constraint firstItem="Sql-Vc-Nor" firstAttribute="leading" secondItem="1lt-qy-7jB" secondAttribute="leading" constant="150" id="bqm-k5-KCq"/>
-                            <constraint firstItem="Ore-H2-lcW" firstAttribute="bottom" secondItem="1lt-qy-7jB" secondAttribute="bottom" constant="150" id="cpB-Wf-FcF"/>
-                            <constraint firstItem="Ore-H2-lcW" firstAttribute="leading" secondItem="1lt-qy-7jB" secondAttribute="leading" constant="150" id="dzl-DG-cTR"/>
-                            <constraint firstItem="8Wf-3z-1zi" firstAttribute="bottom" secondItem="1lt-qy-7jB" secondAttribute="bottom" constant="150" id="eTo-Ig-oMH"/>
-                            <constraint firstItem="Sql-Vc-Nor" firstAttribute="bottom" secondItem="1lt-qy-7jB" secondAttribute="bottom" constant="150" id="fbj-cE-PPv"/>
-                            <constraint firstItem="Ore-H2-lcW" firstAttribute="trailing" secondItem="1lt-qy-7jB" secondAttribute="trailing" constant="150" id="hU0-Gw-iBK"/>
-                            <constraint firstItem="JOA-Tw-njc" firstAttribute="bottom" secondItem="1lt-qy-7jB" secondAttribute="bottom" constant="150" id="ilA-72-uQY"/>
-                            <constraint firstItem="JOA-Tw-njc" firstAttribute="top" secondItem="1lt-qy-7jB" secondAttribute="top" constant="150" id="luD-8B-Tvh"/>
-                            <constraint firstItem="8Wf-3z-1zi" firstAttribute="trailing" secondItem="1lt-qy-7jB" secondAttribute="trailing" constant="150" id="ohG-d2-XcZ"/>
-                            <constraint firstItem="8Wf-3z-1zi" firstAttribute="leading" secondItem="1lt-qy-7jB" secondAttribute="leading" constant="150" id="osh-mj-fdA"/>
-                            <constraint firstItem="JOA-Tw-njc" firstAttribute="trailing" secondItem="1lt-qy-7jB" secondAttribute="trailing" constant="150" id="uZn-VJ-A5T"/>
-                            <constraint firstItem="8Wf-3z-1zi" firstAttribute="top" secondItem="1lt-qy-7jB" secondAttribute="top" constant="150" id="uue-ih-4IC"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="Vmf-bM-1zF"/>
@@ -385,20 +376,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylQ-0g-6k0">
-                                <rect key="frame" x="199" y="382" width="276" height="66"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="Add new class"/>
-                                <connections>
-                                    <segue destination="94X-KL-5Xj" kind="show" id="nu1-eg-Te1"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTU-ay-TFE">
-                                <rect key="frame" x="218" y="640" width="391" height="66"/>
+                                <rect key="frame" x="47" y="598" width="611" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="Add to existing class"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Edit Existing Class">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <segue destination="bxw-eh-9Zw" kind="show" id="El5-wj-VpR"/>
                                 </connections>
@@ -413,12 +398,24 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add to Classes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Zh-JA-0wC">
-                                <rect key="frame" x="213" y="104" width="287" height="54"/>
+                                <rect key="frame" x="219" y="62" width="287" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylQ-0g-6k0">
+                                <rect key="frame" x="47" y="290" width="611" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="Add New Class">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="94X-KL-5Xj" kind="show" id="nu1-eg-Te1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="ViI-X0-kCm"/>
@@ -432,20 +429,25 @@
         <!--View Controller-->
         <scene sceneID="nyf-Un-MwP">
             <objects>
-                <viewController id="bxw-eh-9Zw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Clv-wt-LU9">
+                <viewController wantsFullScreenLayout="YES" id="bxw-eh-9Zw" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Clv-wt-LU9">
                         <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add to Existing Classes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o85-bC-kAp">
-                                <rect key="frame" x="133" y="52" width="447" height="54"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Existing Classes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o85-bC-kAp">
+                                <rect key="frame" x="133" y="52" width="395" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lEs-17-zeB">
+                                <rect key="frame" x="110" y="137" width="485" height="564"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HmA-lJ-IYf">
-                                <rect key="frame" x="369" y="830.5" width="96" height="66"/>
+                                <rect key="frame" x="304" y="855" width="96" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="Back"/>
@@ -461,7 +463,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vH0-Eu-cvL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="500"/>
+            <point key="canvasLocation" x="1806.6666666666665" y="500"/>
         </scene>
         <!--Code Attendance-->
         <scene sceneID="FkA-K4-CKn">
@@ -477,8 +479,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuq-Wn-7i9">
-                                <rect key="frame" x="308" y="963" width="96" height="66"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tuq-Wn-7i9">
+                                <rect key="frame" x="357" y="963" width="96" height="66"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
                                 <state key="normal" title="Back"/>
                                 <connections>
@@ -486,9 +488,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udy-xS-xnq">
-                                <rect key="frame" x="179" y="832" width="355" height="66"/>
+                                <rect key="frame" x="100" y="832" width="611" height="57"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                <state key="normal" title="Check Attendance"/>
+                                <state key="normal" title="Check Attendance">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QAM-hP-zzf">
                                 <rect key="frame" x="335" y="105" width="43" height="21"/>
@@ -496,8 +501,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyQ-nc-TaF">
-                                <rect key="frame" x="179" y="174" width="535" height="573"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SyQ-nc-TaF">
+                                <rect key="frame" x="138" y="134" width="535" height="634"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <viewLayoutGuide key="safeArea" id="UrF-ee-huL"/>
                             </view>
@@ -532,8 +537,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gmi-aR-HwW"/>
-        <segue reference="8dF-dS-oGK"/>
+        <segue reference="tJb-zJ-ZmU"/>
+        <segue reference="mCI-uH-56v"/>
         <segue reference="DKC-I7-P8j"/>
         <segue reference="jDk-25-gDg"/>
     </inferredMetricsTieBreakers>

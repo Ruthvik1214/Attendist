@@ -25,7 +25,9 @@ class AddClasses: UIViewController {
     @IBOutlet weak var connection: UIButton!
     @IBAction func createdClass(_ sender: Any) {
         let ref = Database.database().reference()
-        ref.child(AppDelegate.userID).child(className.text ?? "").child(studentID.text ?? "").child("Name").setValue(studentName.text ?? "")
+        ref.child("Teacher1").child(className.text ?? "").child(studentID.text ?? "").child("Name").setValue(studentName.text ?? "")
+        studentID.text = ""
+        studentName.text = ""
     }
     
 }

@@ -10,6 +10,8 @@ import AVFoundation
 import FirebaseDatabase
 import Firebase
 
+var dateStamp = ""
+var qrCodeInfo = ""
 class QRCodeAttendance: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     //@IBOutlet weak var lblStudentCode: UILabel!
@@ -22,9 +24,13 @@ class QRCodeAttendance: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     
     
     @IBOutlet weak var lblStudentCode: UILabel!
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var cameraPreviewView: UIView!
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    @IBAction func backButtonIsPressed(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
    override func viewDidLoad() {
           super.viewDidLoad()
@@ -104,17 +110,18 @@ class QRCodeAttendance: UIViewController, AVCaptureMetadataOutputObjectsDelegate
               AudioServicesPlaySystemSound (1108);
               found(code: stringValue)
           }
-          //dismiss(animated: true)
       }
       
       func found(code: String) {
-          
-          //lblStudentCode.text
-//          AttendanceData.StudentId = code
-//          captureSession.startRunning()
-//          let dateFormat = DateFormatter()
-//          AddAttendanceRecord(date: dateFormat.string(from: Date()), classroomId: AttendanceData.ClassroomId, period: AttendanceData.Period, teacherId: AttendanceData.TeacherId, studentId: AttendanceData.StudentId)
-          //self.view.isHidden = false
+        captureSession.startRunning()
+        qrCodeInfo = code
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-MM-yyyy"
+        let dataStamp = dateFormatter.string(from: date)
+        dateStamp = dataStamp
+        let ref = Database.database().reference()
+        ref.child("Teachers").child(signedInUser).child("Classes").child(selectedClass).child(qrCodeInfo).child(dateStamp).setValue("Present")
       }
       
       override var prefersStatusBarHidden: Bool {

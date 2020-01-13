@@ -12,14 +12,15 @@ import FirebaseDatabase
 import GoogleSignIn
 import FirebaseAuth
 
+var signedInUser = ""
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
-//    static var userID = ""
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
       // ...
       if let error = error {
-        // ...
+        signedInUser = ""
         return
       }
 
@@ -28,11 +29,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
                                                         accessToken: authentication.accessToken)
       Auth.auth().signIn(with: credential) { (authResult, error) in
         if let error = error {
-          // ...
+          signedInUser = ""
           return
         }
 //        AppDelegate.userID = user.userID
-        
+        signedInUser = user.userID
+        print(signedInUser)
+         GIDSignIn.sharedInstance()?.presentingViewController.performSegue(withIdentifier: "toHomeScreen", sender: self)
         }
 
     }

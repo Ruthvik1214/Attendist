@@ -11,45 +11,39 @@ import GoogleSignIn
 import Firebase
 import FirebaseDatabase
 
-
+var selectedClass = ""
 class ViewController: UIViewController {
 
-    @IBOutlet weak var N: UITableView!
-    var lis = [""]
-    var jis = [""]
+    @IBOutlet weak var takeAttendance: UIButton!
+    @IBOutlet weak var currentAttendance: UIButton!
+    @IBOutlet weak var classSegmentedControl: UISegmentedControl!
+    
+    @IBOutlet weak var signOut: UIButton!
+    func loadData() {
+        //var classNames = [String]()
+        let ref = Database.database().reference()
+     ref.child("Teachers").child(signedInUser).child("Classes").queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
+            self.classSegmentedControl.insertSegment(withTitle: snapshot.key, at: 0, animated: false)
+        })
+    }
+    @IBAction func segmentChanged(_ sender: Any) {
+        takeAttendance.isHidden = false
+        currentAttendance.isHidden = false
+        selectedClass = classSegmentedControl.titleForSegment(at: classSegmentedControl.selectedSegmentIndex) ?? "1"
+        print(selectedClass)
+    }    
+    
+    @IBAction func signOutIsPressed(_ sender: Any) {
+        self.dismiss(animated: true)
+        signedInUser = ""
+    }
+    
     override func viewDidLoad() {
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-        GIDSignIn.sharedInstance().signIn()
         super.viewDidLoad()
+        classSegmentedControl.removeAllSegments()
+        takeAttendance.isHidden = true
+        currentAttendance.isHidden = true
+        loadData()
     }
-
-//    @IBAction func Hyppo(_ sender: Any) {
-//        let oof = Database.database().reference()
-//        oof.child("/Students/0001").observeSingleEvent(of: .value, with: { (snapshot) in
-//            let value = snapshot.value as? NSDictionary
-//            let username = value?["Name"] as? String
-//            if (username == "") {
-//              self.Y.text = "Hi"
-//            }
-//            else {
-//                self.Y.text = username
-//            }
-//         // ...
-//         }) { (error) in
-//           print(error.localizedDescription)
-//       }
-//
-//        oof.child("/Students").observe(.value) { snapshot in
-//            for x in snapshot.children{
-//                let kalue = snapshot.value as? [String:Any]
-//                var kusername = kalue?["Name"] as? String
-//                self.jis.append(kusername)
-//                print(self.jis)
-//
-//        }
-        
-    }
-
-  
-
-
+    
+}

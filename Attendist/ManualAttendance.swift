@@ -29,7 +29,7 @@ class ManualAttendance: UIViewController {
         if studentID.text != "Enter the Student's ID" {
                 let date = Date()
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "dd-MM-yyyy"
+                dateFormatter.dateFormat = "MM-dd-yyyy"
                 let dataStamp = dateFormatter.string(from: date)
                 let dateStampLocal = dataStamp
                 var studentsHere = [String]()
@@ -37,7 +37,8 @@ class ManualAttendance: UIViewController {
                     studentsHere.append(ID.StudentID)
                 }
                 if studentsHere.contains(studentID.text ?? "") {
-                ref.child("Teachers").child(signedInUser).child("Classes").child(selectedClass).child(qrCodeInfo).child(dateStampLocal).setValue("Present")
+                    ref.child("Teachers").child(signedInUser).child("Classes").child(selectedClass).child(studentID.text ?? "").child(dateStampLocal).setValue("Present")
+                    studentID.text = ""
                     }
                 else {
                     studentID.text = "Student is not in this Class"

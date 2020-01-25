@@ -12,35 +12,40 @@ import Firebase
 import FirebaseDatabase
 
 
+
 class CurrentAttendance: UITableViewController{
     
-    var students = [StudentData]()
-    
-    var studentAttendences = [StudentAttendenceData]()
 
-//    func showStudentStatus {
-//        if
-//    }
-    
-    func loadData() {
+    func loadData()
+    {
+        students = [StudentAttendanceData]()
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        let dataStamp = dateFormatter.string(from: date)
+        let dateStampLocal = dataStamp
+
         let ref = Database.database().reference()
+
         ref.child("Teachers").child(signedInUser).child("Classes").child(selectedClass).queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            let name = value?["Name"] as? String
-            self.students.insert(StudentData(StudentID: snapshot.key, StudentName: name), at: 0)
+                   let value = snapshot.value as? NSDictionary
+                   let name = value?["Name"] as? String ?? ""
+            
+            var attendance = value?[dateStampLocal] as? String ?? ""
+            if (attendance != "Present"){
+                attendance = "Absent"
+            }
+
+            students.insert(StudentAttendanceData(StudentID: snapshot.key, StudentName: name, Attendance: attendance), at: 0)
             self.tableView.reloadData()
-    })
-        
-        ref.child("Teachers").child(signedInUser).child("Classes").child(selectedClass).queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
-        let value = snapshot.value as? NSDictionary
-        self.studentAttendences.insert(StudentAttendenceData(StudentID: snapshot.key, Attendence: value?[dateStamp] as! String), at: 0)
-        })
-        
+           })
+
         self.tableView.reloadData()
     }
    
     override func viewDidLoad() {
            super.viewDidLoad()
+           self.tableView.reloadData()
            loadData()
     }
     
@@ -55,21 +60,18 @@ class CurrentAttendance: UITableViewController{
         
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Student1", for: indexPath)
-        let ref = Database.database().reference()
+
         cell.textLabel?.text = students[indexPath.row].StudentName
- 
+        
+        //cell.backgroundColor = .systemGray
+        cell.textLabel?.textColor = .black
+        
 
-        ref.child("Teachers").child(signedInUser).child("Classes").child(selectedClass).queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
-        let value = snapshot.value as? NSDictionary
-        if value?[dateStamp] != nil {
-            if value?[dateStamp] as! String == "Present" {
-                cell.backgroundColor = .green
-            }
+        if students[indexPath.row].Attendance == "Present"
+        {
+            cell.backgroundColor = .systemGreen
         }
-
-        self.tableView.reloadData()
-    })
-    
+        
         return cell
     }
 }

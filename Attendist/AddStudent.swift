@@ -24,13 +24,35 @@ class AddStudent: UIViewController {
     }
     
     @IBAction func submitStudentInformation(_ sender: Any) {
-            let ref = Database.database().reference().child("Students").child(studentID.text ?? "1")
-            let dict = ["Name":studentName.text,"Grade":studentGrade.text]
-            ref.setValue(dict)
-        studentID.text = ""
-        studentName.text = ""
-        studentGrade.text = ""
-            
+            let ref = Database.database().reference()
+            if studentGrade.text == "" {
+                studentGrade.text = "Enter the Student's Grade"
+            }
+            if studentName.text == "" {
+                studentName.text = "Enter the Student's Name"
+            }
+            if studentID.text == "" {
+                studentID.text = "Enter the Student's ID"
+            }
+            if studentName.text != "Enter the Student's Name" && studentID.text != "Enter the Student's ID" && studentGrade.text != "Enter the Student's Grade" {
+                ref.child("Students").child(studentID.text ?? "").child("Name").setValue(studentName.text ?? "")
+                ref.child("Students").child(studentID.text ?? "").child("Grade").setValue(studentGrade.text ?? "")
+                
+                    studentID.text = ""
+                    studentName.text = ""
+                    studentGrade.text = ""
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+                if self.studentID.text == "Enter the Student's ID" {
+                    self.studentID.text = ""
+                }
+                if self.studentName.text == "Enter the Student's Name" {
+                    self.studentName.text = ""
+                }
+                if self.studentGrade.text == "Enter the Student's Grade" {
+                    self.studentGrade.text = ""
+                }
+            }
         
         }
        

@@ -28,6 +28,7 @@ class QRCodeAttendance: UIViewController, AVCaptureMetadataOutputObjectsDelegate
     @IBOutlet weak var cameraPreviewView: UIView!
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    
     @IBAction func backButtonIsPressed(_ sender: Any) {
         self.dismiss(animated: true)
     }
@@ -108,20 +109,27 @@ class QRCodeAttendance: UIViewController, AVCaptureMetadataOutputObjectsDelegate
               guard let stringValue = readableObject.stringValue else { return }
               AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
               AudioServicesPlaySystemSound (1108);
-              found(code: stringValue)
+              found(qrCodeInfo: stringValue)
           }
       }
       
-      func found(code: String) {
+      func found(qrCodeInfo: String) {
         captureSession.startRunning()
-        qrCodeInfo = code
         let date = Date()
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
+        dateFormatter.dateFormat = "MM-dd-yyyy"
         let dataStamp = dateFormatter.string(from: date)
         dateStamp = dataStamp
         let ref = Database.database().reference()
-        ref.child("Teachers").child(signedInUser).child("Classes").child(selectedClass).child(qrCodeInfo).child(dateStamp).setValue("Present")
+        var studentsHere = [String]()
+        for ID in students{
+            studentsHere.append(ID.StudentID)
+        }
+        if studentsHere.contains(qrCodeInfo) {
+            ref.child("Teachers").child(signedInUser).child("Classes").child(selectedClass).child(qrCodeInfo).child(dateStamp).setValue("Present")
+
+        }
+        
       }
       
       override var prefersStatusBarHidden: Bool {

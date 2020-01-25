@@ -50,7 +50,9 @@ struct StudentData {
     let StudentName: String!
 }
 
-struct StudentAttendenceData {
+
+struct StudentAttendanceData {
     let StudentID: String!
-    let Attendence: String!
+    let StudentName: String!
+    let Attendance: String!
 }

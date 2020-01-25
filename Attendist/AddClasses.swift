@@ -13,7 +13,6 @@ import FirebaseAuth
 import GoogleSignIn
 
 
-
 class AddClasses: UIViewController {
     
     @IBOutlet weak var className: UITextField!
@@ -39,9 +38,32 @@ class AddClasses: UIViewController {
     }	
     @IBAction func createdClass(_ sender: Any) {
         let ref = Database.database().reference()
-        ref.child("Teachers").child(signedInUser).child("Classes").child(className.text ?? "").child(studentID.text ?? "").child("Name").setValue(studentName.text ?? "")
-        studentID.text = ""
-        studentName.text = ""
+        if className.text == "" {
+            className.text = "Enter the Class Name"
+        }
+        if studentName.text == "" {
+            studentName.text = "Enter the Student's Name"
+        }
+        if studentID.text == "" {
+            studentID.text = "Enter the Student's ID"
+        }
+        if studentName.text != "Enter the Student's Name" && studentID.text != "Enter the Student's ID" && className.text != "Enter the Class Name" {
+           ref.child("Teachers").child(signedInUser).child("Classes").child(className.text ?? "").child(studentID.text ?? "").child("Name").setValue(studentName.text ?? "")
+                studentID.text = ""
+                studentName.text = ""
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
+            if self.studentID.text == "Enter the Student's ID" {
+                self.studentID.text = ""
+            }
+            if self.studentName.text == "Enter the Student's Name" {
+                self.studentName.text = ""
+            }
+            if self.className.text == "Enter the Class Name" {
+                self.className.text = ""
+            }
+        }
+
     }
     override func viewDidLoad() {
         super.viewDidLoad()

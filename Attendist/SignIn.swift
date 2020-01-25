@@ -12,18 +12,7 @@ import Firebase
 import FirebaseDatabase
 
 class SignIn: UIViewController{
-    
-    func didSignIn() {
-        while (true) {
-            if (signedInUser == ""){
-                homepageButton.isHidden = false
-            }
-            else {
-                homepageButton.isHidden = true
-            }
-            
-        }
-    }
+
     @IBOutlet weak var homepageButton: UIButton!
     
     override func viewDidLoad() {
@@ -31,9 +20,7 @@ class SignIn: UIViewController{
         GIDSignIn.sharedInstance()?.presentingViewController = 	self
         GIDSignIn.sharedInstance().signIn()
         
-        if (signedInUser == ""){
-        }
-        else {
+       if signedInUser != "" {
 
            self.performSegue(withIdentifier: "toHomeScreen", sender: self)
         }

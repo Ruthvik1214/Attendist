@@ -27,6 +27,8 @@
 		44868EC323CB87B900AE08D6 /* ClassOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44868EC223CB87B900AE08D6 /* ClassOptions.swift */; };
 		44868EC523CBB74F00AE08D6 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44868EC423CBB74F00AE08D6 /* SignIn.swift */; };
 		44A860C923C82AC300AA36A7 /* AddClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44A860C823C82AC300AA36A7 /* AddClasses.swift */; };
+		44B5B65423DD006E00E7A232 /* DeleteAttendance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B5B65323DD006E00E7A232 /* DeleteAttendance.swift */; };
+		44D6CB3423E0E0A500BF05AE /* DeleteStudent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D6CB3323E0E0A500BF05AE /* DeleteStudent.swift */; };
 		524F315A3266BC1EB2CB243A /* Pods_Attendist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCF80256F87D2785E1E9340 /* Pods_Attendist.framework */; };
 		68E8FB6F6099E5D60B0516EF /* Pods_AttendistTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D32230C32FFF68ACBC798903 /* Pods_AttendistTests.framework */; };
 		C33BA9BA0DDF5F80A3714D07 /* Pods_Attendist_AttendistUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FF161577224A14C7A64DB40 /* Pods_Attendist_AttendistUITests.framework */; };
@@ -78,6 +80,8 @@
 		44868EC223CB87B900AE08D6 /* ClassOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassOptions.swift; sourceTree = "<group>"; };
 		44868EC423CBB74F00AE08D6 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		44A860C823C82AC300AA36A7 /* AddClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClasses.swift; sourceTree = "<group>"; };
+		44B5B65323DD006E00E7A232 /* DeleteAttendance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAttendance.swift; sourceTree = "<group>"; };
+		44D6CB3323E0E0A500BF05AE /* DeleteStudent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteStudent.swift; sourceTree = "<group>"; };
 		46B1F4A2D5825DF501AD6D19 /* Pods-AttendistTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AttendistTests.debug.xcconfig"; path = "Target Support Files/Pods-AttendistTests/Pods-AttendistTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6A44C9A19BA877EA1A7D9230 /* Pods-Attendist-AttendistUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Attendist-AttendistUITests.debug.xcconfig"; path = "Target Support Files/Pods-Attendist-AttendistUITests/Pods-Attendist-AttendistUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBCF80256F87D2785E1E9340 /* Pods_Attendist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Attendist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -147,6 +151,8 @@
 				442659BD23A2ABB100942C5D /* ViewController.swift */,
 				44868EC223CB87B900AE08D6 /* ClassOptions.swift */,
 				442659BF23A2ABB200942C5D /* Main.storyboard */,
+				44D6CB3323E0E0A500BF05AE /* DeleteStudent.swift */,
+				44B5B65323DD006E00E7A232 /* DeleteAttendance.swift */,
 				44868EC423CBB74F00AE08D6 /* SignIn.swift */,
 				44868EC023CB85B000AE08D6 /* AttendanceType.swift */,
 				44868EBE23CB5C6000AE08D6 /* AddStudent.swift */,
@@ -486,7 +492,9 @@
 				442DA80723C31E2C0034EAD6 /* SampleData.swift in Sources */,
 				44A860C923C82AC300AA36A7 /* AddClasses.swift in Sources */,
 				442DA80323C31BBD0034EAD6 /* AttendanceRecords.swift in Sources */,
+				44B5B65423DD006E00E7A232 /* DeleteAttendance.swift in Sources */,
 				442DA80523C31D3B0034EAD6 /* ManualAttendance.swift in Sources */,
+				44D6CB3423E0E0A500BF05AE /* DeleteStudent.swift in Sources */,
 				44868EC323CB87B900AE08D6 /* ClassOptions.swift in Sources */,
 				44868EBB23CA9AF200AE08D6 /* EditExistingClasses.swift in Sources */,
 				442659BA23A2ABB100942C5D /* AppDelegate.swift in Sources */,

@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="Ygk-na-KFG" customClass="DeleteAttendance" customModule="Attendist" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="71n-Rj-p5E">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="1006.9200564096436"/>
+                        <rect key="frame" x="0.0" y="0.0" width="712" height="1007"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delete Attendance Record" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQz-n1-kbo">
@@ -41,6 +41,7 @@
                                 <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="backButtonIsPressed:" destination="7vx-Uf-dg5" eventType="touchUpInside" id="4dn-0V-fjQ"/>
+                                    <action selector="backButtonIsPressed:" destination="Ygk-na-KFG" eventType="touchUpInside" id="Z56-xu-FDH"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="23T-Vt-Yik">
@@ -64,6 +65,9 @@
                                 <state key="normal" title="Delete Record">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="deletingAttendance:" destination="Ygk-na-KFG" eventType="touchUpInside" id="rdn-yU-pbh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -71,6 +75,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="mjY-yU-P8H"/>
                     <connections>
+                        <outlet property="backButton" destination="QEu-ul-smc" id="Mrh-Mx-aLW"/>
+                        <outlet property="deleteAttendance" destination="gQA-mK-O8g" id="903-XS-4ie"/>
                         <outlet property="studentID" destination="23T-Vt-Yik" id="Oo0-7s-TRN"/>
                     </connections>
                 </viewController>
@@ -876,7 +882,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="spn-hE-nps"/>
+        <segue reference="F9o-UV-IJN"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
 </document>
